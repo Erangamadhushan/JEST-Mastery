@@ -33,7 +33,7 @@ describe('Button Component', () => {
 
     test('does not call onClick when disabled', () => {
         const handleClick = jest.fn();
-        render(<Button onClick={onClick} disabled={true}>Disabled</Button>);
+        render(<Button onClick={handleClick} disabled>Disabled</Button>);
 
         fireEvent.click(screen.getByText('Disabled'));
         expect(handleClick).not.toHaveBeenCalled();
